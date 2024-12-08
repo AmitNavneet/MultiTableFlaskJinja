@@ -1,0 +1,39 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Multi Tables from {{startNum}}
+            to {{stopNum}}
+        </h1>
+        
+        <table>
+            
+          <tr>  
+            
+        {% for num in range(startNum,stopNum+1) %}
+            {% if loop.index0 % 6 == 0 %}
+               </tr> <tr>
+            {% endif %}
+
+            {% if num%3==0 %}
+                <td style="background-color: blueviolet;">
+            
+            {% else %}
+            <td>
+                    {% endif %}
+                
+                  
+            {% for row in range(1,11) %}
+                {{num}}x{{row}}={{num*row}}<br>
+                
+            {% endfor %}
+            </td>
+        
+        
+            
+        {% endfor %}
+        
+        </tr>
+            </table>
+
+    </body>
+</html>
